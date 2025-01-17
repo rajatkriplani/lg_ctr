@@ -1,0 +1,46 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.lg_ctr"
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17  // Changed from 23
+        targetCompatibility = JavaVersion.VERSION_17  // Changed from 23
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'  // Changed from '23'
+    }
+
+    defaultConfig {
+        applicationId = "com.example.lg_ctr"
+        minSdk = 23
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("key.jks")
+            storePassword "lglglg"
+            keyAlias "key"
+            keyPassword "lglglg"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
