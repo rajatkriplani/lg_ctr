@@ -41,7 +41,6 @@ class LGService {
       </Icon>
       <overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
       <screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
-      <size x="0.3" y="0.2" xunits="fraction" yunits="fraction"/>
     </ScreenOverlay>
   </Document>
 </kml>''';
